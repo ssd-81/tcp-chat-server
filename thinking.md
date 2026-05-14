@@ -22,3 +22,4 @@ To begin this, I need a simple thing working; two nodes (I don't know how I will
 ### should I run client and server in separate files? 
 - I think to first test out the main idea, I should just get them working state, from there we will try to optimize it further. 
 - Current task is simple: get client to send data to server and server confirming back. 
+- I am not sure if the flow that I have designed is working as expected. I need a way to check if the model I have of flow is correct or not? 

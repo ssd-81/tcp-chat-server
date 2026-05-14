@@ -15,6 +15,7 @@ func main() {
 		fmt.Println(err)
 
 	}
+	conn.Write([]byte("apple is good"))
 	fmt.Fprintf(conn, "GET / HTTP/1.0\r\n\r\n")
 	status, err := bufio.NewReader(conn).ReadString('\n')
 	fmt.Println(status)
@@ -39,8 +40,12 @@ func server() {
 	if err != nil {
 		fmt.Println("connection failed; server could not connect to the client")
 	}
+	go handleConnection(conn)
+
+}
+
+func handleConnection(conn net.Conn) {
 	var dataStream []byte // check if this fine with conn.Read
 	conn.Read(dataStream)
 	fmt.Println(dataStream)
-
 }
