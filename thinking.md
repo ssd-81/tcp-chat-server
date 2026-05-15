@@ -23,3 +23,10 @@ To begin this, I need a simple thing working; two nodes (I don't know how I will
 - I think to first test out the main idea, I should just get them working state, from there we will try to optimize it further. 
 - Current task is simple: get client to send data to server and server confirming back. 
 - I am not sure if the flow that I have designed is working as expected. I need a way to check if the model I have of flow is correct or not? 
+
+
+## session 2
+### code fixing session
+- I have some code for now, but right now I am clearly unaware of what is the flow and what each component is doing. I will be spending some time on figuring out assumptions and what needs to be done. 
+- one thing I understand pretty clearly; listen function creates a server and dial function is used by a client to connect to a server. so I likely need to setup the server first. 
+ 

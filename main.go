@@ -8,9 +8,8 @@ import (
 )
 
 func main() {
-	server()
 
-	conn, err := net.Dial("tcp", ":8080")
+	conn, err := net.Dial("tcp", "google.com:443")
 	if err != nil {
 		fmt.Println(err)
 
@@ -40,7 +39,9 @@ func server() {
 	if err != nil {
 		fmt.Println("connection failed; server could not connect to the client")
 	}
-	go handleConnection(conn)
+	// I am not sure if using goroutine here is a good choice
+	// go handleConnection(conn)
+	handleConnection(conn)
 
 }
 
